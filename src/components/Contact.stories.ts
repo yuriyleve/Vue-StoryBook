@@ -1,24 +1,15 @@
-import { Story, Meta } from "@storybook/vue3";
-import Contact from "./Contact.vue"; // Ensure this path points to the actual Contact component
+import type { Meta, StoryObj } from "@storybook/vue3";
+import Contact from "./Contact.vue";
 
-// Component properties inferred automatically
-type ComponentProps = Parameters<typeof Contact>[0];
-
-export default {
-  title: "Example/Contact",
+const meta = {
+  title: "Components/Contact",
   component: Contact,
-  argTypes: {
-    close: { action: "closed" },
-  },
-} as Meta;
+  argTypes: {},
+} satisfies Meta<typeof Contact>;
 
-const Template: Story<ComponentProps> = (args: any) => ({
-  components: { Contact },
-  setup() {
-    return { args };
-  },
-  template: '<Contact v-bind="args" @close="args.close" />',
-});
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Primary: Story = {
+  args: {},
+};

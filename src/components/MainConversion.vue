@@ -15,23 +15,23 @@ const hideContact = () => {
 
 <template>
     <div class="cta">
-        <div class="title">
-            <div class="header">
-                <p>CtA - Main conversion</p>
+        <div class="cta__title">
+            <div class="cta__title__header">
+                <p class="cta__title__header__text">CtA - Main conversion</p>
             </div>
         </div>
-        <div class="content">
-            <div class=" left">
-                <div class="actionTitle">
-                    A wonderful serenity has taken possessio
+        <div class="cta__content">
+            <div class="cta__content__left">
+                <div class="cta__content__action-title">
+                    A wonderful serenity has taken possession
                 </div>
-                <div class="actionDescription">
-                    A wonderful serenity has taken possessio of my entire soul, like these sweet mo
+                <div class="cta__content__action-description">
+                    A wonderful serenity has taken possession of my entire soul, like these sweet moments
                 </div>
-                <button class="button" @click="showContact">Link button</button>
+                <button class="cta__content__button" @click="showContact">Link button</button>
             </div>
-            <div class=" right">
-                <img src="../assets/aaa.jpg" class="" alt="" />
+            <div class="cta__content__right">
+                <img src="../assets/aaa.jpg" class="cta__content__right__image" alt="description" />
             </div>
         </div>
     </div>

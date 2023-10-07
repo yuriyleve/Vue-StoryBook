@@ -1,21 +1,15 @@
-import { Story, Meta } from "@storybook/vue3";
-import MainConversion from "./MainConversion.vue"; // Ensure this path points to the actual MainConversion component
+import type { Meta, StoryObj } from "@storybook/vue3";
+import MainConversion from "./MainConversion.vue";
 
-// Component properties inferred automatically
-type ComponentProps = Parameters<typeof MainConversion>[0];
-
-export default {
-  title: "Example/MainConversion",
+const meta = {
+  title: "Components/MainConversion",
   component: MainConversion,
-} as Meta;
+  argTypes: {},
+} satisfies Meta<typeof MainConversion>;
 
-const Template: Story<ComponentProps> = (args: any) => ({
-  components: { MainConversion },
-  setup() {
-    return { args };
-  },
-  template: '<MainConversion v-bind="args" />',
-});
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Primary: Story = {
+  args: {},
+};
