@@ -8,7 +8,7 @@ body {
   background-color: white;
 }
 
-.button {
+.cta__content__button {
   width: 100px;
   background-color: black;
   border: none;
@@ -24,64 +24,64 @@ body {
   cursor: pointer;
 }
 
-.button:hover {
+.cta__content__button:hover {
   background-color: #555555;
 }
 
 .cta,
-.content,
-.left {
+.cta__content,
+.cta__content__left {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.title,
-.header p {
+.cta__title,
+.cta__title__header__text {
   margin-left: 10px;
   font-family: 'Playfair Display', serif;
 }
 
-.header {
+.cta__title__header {
   font-size: 36px;
   font-weight: 600;
   margin-left: 60px;
   border-left: 6px solid red;
 }
 
-.actionTitle {
+.cta__content__action-title {
   font-size: 24px;
   font-weight: 600;
 }
 
-.actionDescription {
+.cta__content__action-description {
   font-size: 16px;
 }
 
-.content {
+.cta__content {
   flex-direction: row;
   align-items: stretch;
 }
 
-.left {
+.cta__content__left {
   justify-content: center;
   gap: 30px;
   padding: 60px;
   background-color: #f1f1f1;
 }
 
-.right,
-.left {
+.cta__content__right,
+.cta__content__left {
   width: 50%;
 }
 
-img {
+.cta__content__right__image {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.contactBox {
+.contact {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -92,7 +92,7 @@ img {
   position: relative;
 }
 
-.contactBox::before {
+.contact::before {
   content: "";
   width: 0;
   height: 0;
@@ -104,18 +104,18 @@ img {
   left: 50px;
 }
 
-.contactBox button {
+.contact__close-button {
   height: 20px;
   background-color: transparent;
   border: 0;
 }
 
-.contactBox svg {
+.contact__close-button svg {
   cursor: pointer;
   color: white;
 }
 
-.contactTitle {
+.contact__title {
   font-size: 24px;
   font-weight: 600;
   font-family: 'Roboto Condensed', sans-serif;
@@ -123,50 +123,48 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .button {
+  .cta__content__button {
     width: 100%;
     margin: 0;
   }
 
-  .header {
+  .cta__title__header {
     font-size: 26px;
     margin-left: 10px;
   }
 
-  .title {
+  .cta__title {
     padding: 10px;
     align-items: center;
   }
 
-  .contactBox {
+  .contact {
     padding: 10px;
   }
 
-  .content {
+  .cta__content {
     align-items: center;
     flex-direction: column-reverse;
   }
 
-  .left {
+  .cta__content__left {
     padding: 30px;
   }
 
-  .right,
-  .left {
+  .cta__content__right,
+  .cta__content__left {
     width: 100%;
   }
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-  .header {
+  .cta__title__header {
     font-size: 26px;
     margin-left: 30px;
   }
 
-  .left,
-  .contactBox {
+  .cta__content__left,
+  .contact {
     padding: 30px;
   }
 }
