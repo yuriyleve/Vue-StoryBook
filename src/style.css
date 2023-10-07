@@ -149,6 +149,7 @@ body {
 
   .cta__content__left {
     padding: 30px;
+    min-height: 400px;
   }
 
   .cta__content__right,
@@ -163,7 +164,10 @@ body {
     margin-left: 30px;
   }
 
-  .cta__content__left,
+  .cta__content__left {
+    padding: 10px;
+  }
+
   .contact {
     padding: 30px;
   }
